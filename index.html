@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather API</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+      <video autoplay muted loop class="videoPlayer" src="backgroundvideos/mainBackground.mp4"></video>
+    </div>
+    <div class="main_container">
+      <h1>Want to know weather conditions at your favourite city?</h1>
+      <form class="" action="/weatherInfo" method="post">
+          <input type="text" name="city" placeholder="Enter City Name" required autocomplete="off">
+          <button type="submit" name="submit">Get Weather Report</button>
+      </form>
+    </div>
+</body>
+</html>

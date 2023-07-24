@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <% if(description.toLowerCase().includes("thunderstorms")){ %>
+            <video autoplay muted loop class="videoPlayer" src="backgroundvideos/Thunderstorms.mp4"></video>
+        <% } else if(description.toLowerCase().includes("rain")){ %>
+            <video autoplay muted loop class="videoPlayer" src="backgroundvideos/rain.mp4"></video>
+        <% } else if(description.toLowerCase().includes("broken") || description.toLowerCase().includes("overcast")){ %>
+            <video autoplay muted loop class="videoPlayer" src="backgroundvideos/blackClouds.mp4"></video>
+        <% } else if(description.toLowerCase().includes("scattered") || description.toLowerCase().includes("few")){ %>
+            <video autoplay muted loop class="videoPlayer" src="backgroundvideos/cloudySky.mp4"></video>
+        <% } else{ %>
+            <video autoplay muted loop class="videoPlayer" src="backgroundvideos/clearsky.mp4"></video>
+        <% } %>
+    </div>
+    <div class="main_container weather_content">
+        <h1> <%= description %> </h1>
+        <p> Current Temperature in <%= name %> is <%= temp %> ℃ Temperature</p>
+        <div class="humwind">
+            <div>
+                <img src="images/humidity.png" alt="">
+                <p> <%= humidity %>% humidity </p>
+            </div>
+            <div>
+                <img src="images/windspeed.png" alt="">
+                <p> <%= windspeed %>m/sec wind speed </p>
+            </div>
+        </div>
+        <button><a href="/">Back to Search</a></button>
+    </div>
+</body>
+</html>
